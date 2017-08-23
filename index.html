@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+  </head>
+  <body>
+  <!-- GAME HEADER - MAKE LOGO RESPONSIVE ON SCALING -->
+    <header>
+      <div class="container-fluid">
+        <div class="row brand-color">
+          <div class="col-sm-12 header-content">
+            <div class="col-sm-7 col-md-7 col-lg-7">
+              <h4 class='col-sm-12 start-text  fancy-font'>
+                The
+              </h4>
+              <h1 id='middle-text' class="col-sm-12 middle-text fancy-font">
+                Hangman's
+              </h1>
+              <h2 class="col-sm-12 end-text fancy-font">
+                Noose
+              </h2>
+            </div>
+            <div class="col-sm-5 col-md-5 col-lg-5">
+              <img class="img-responsive logo right" src="./images/logo-white-small.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class='container-fluid'>
+        <div class="row">
+          <div class="aside col-sm-1">
+            <img class="img-responsive gallows" src="./images/gallows.png"  />
+          </div>
+          <div class="body-content col-sm-11">
+            <div id="foo"></div>
+            <div id="word"></div>
+            <div id="loseDiv"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./scripts/hangman.js"></script>
+  </body>
+</html>
