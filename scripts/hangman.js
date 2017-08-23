@@ -13,32 +13,38 @@ console.log(gameWord)
 var gameLettersArray = gameWord.split([])
 console.log(gameLettersArray.length)
 var container = document.getElementById('foo')
-var correctLetters =[];
+var answer = ''
+var losses = 0
+// var correctLetters =[];
 
-function game () {
+// function game () {
 displayBlanks = function () {
-  var addToScreen = document.getElementById('foo')
-  var spaces = ''
   for(var i = 0; i <+ gameLettersArray.length; i++) {
-    spaces = spaces + '_ '
-    addToScreen.innerHTML = spaces
+    answer = answer + '_'
+    container.innerHTML = answer
   }
 }
 
 document.onkeyup = function (event) {
   guessLetter = event.key
-  if (gameLetters.indexOf(guessLetter) !== -1) {
-    alert('your letter was found')
-    alert(guessLetter)
-    var x = document.getElementById('foo')
-    x.innerHTML = guessLetter
+  var letterIndex = gameWord.indexOf(guessLetter)
+  if (letterIndex !== -1) {
+    // alert('your letter was found')
+    // alert(guessLetter)
+    answer=answer.split('')
+    answer[letterIndex] = guessLetter
+    answer = answer.join('')
+    container.innerHTML = answer
   } else {
-    alert('your letter was not found')
+    // alert('your letter was not found')
+    document.getElementById('loseDiv').innerHTML = losses
+    if(losses++ > 5) {
+      alert('you lose')
+    }
   }
-
 }
-}
-game()
+displayBlanks()
+// game()
 
 
 
