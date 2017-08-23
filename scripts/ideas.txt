@@ -1,0 +1,53 @@
+for (var i = 0; i < gameLetters.length; i++) {
+  gameLetters[i] = '_'
+  var node = document.createElement("div")
+  var textnode = document.createTextNode(gameLetters[i])
+  node.appendChild(textnode)
+  console.log(gameLetters[i])
+  document.getElementById('word').appendChild(node)
+}
+
+
+for (var i = 0; i < gameLetters.length; i++) {
+  var g = gameLetters[i]
+  console.log('this is ' + g)
+  var a = 'b'
+  console.log('this is ' + a);
+  a = '_'
+  console.log('this is ' + a)
+  gameLetters[i] = '_'
+  console.log(gameLetters[i]);
+
+  function main () {
+    addListeners ("#inputSpace", "#buttonClick")
+  }
+
+  function runGame () {
+
+  function letterSetup () {
+    var guessLetter
+    var wordArray = ['death', 'crime', 'punishment', 'guilty', 'outlaw']
+    var gameWord = wordArray[Math.floor(Math.random() * wordArray.length)]
+    console.log(gameWord)
+    var gameLettersArray = gameWord.split([])
+    console.log(gameLettersArray.length)
+    var container = document.getElementById('foo')
+  }
+
+  function addListeners () {
+    $('#inputSpace').keypress(function (event) {
+      console.log(event)
+    })
+    $("#buttonClick").keypress(function (event) {
+      console.log(event)
+    })
+  }
+    main()
+
+    var addToScreen = document.getElementById('foo')
+    var spaces = ''
+    for(var i = 0; i <+ gameLettersArray.length; i++) {
+      spaces = spaces + '_ '
+      addToScreen.innerHTML = spaces
+    }
+  }

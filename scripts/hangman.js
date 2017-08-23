@@ -2,49 +2,65 @@
 // console.log(x)
 // var guessLetter;
 // var lettersUsed;
-// var correctLetters;
+
 // var wrongLetters;
 // var letterUsedArray = [];
 // var i = 0;
+var guessLetter
+var wordArray = ['death', 'crime', 'punishment', 'guilty', 'outlaw']
+var gameWord = wordArray[Math.floor(Math.random() * wordArray.length)]
+console.log(gameWord)
+var gameLettersArray = gameWord.split([])
+console.log(gameLettersArray.length)
+var container = document.getElementById('foo')
+var correctLetters =[];
+
 function game () {
-
-  var lose = 0
-  var guessLetter
-  var wordArray = ['death', 'crime', 'punishment', 'guilty', 'outlaw']
-  var gameWord = wordArray[Math.floor(Math.random() * wordArray.length)]
-  console.log(gameWord)
-  var gameLetters = gameWord.split('')
-  console.log(gameLetters)
-
-  for (var i = 0; i < gameLetters.length; i++) {
-    var g = gameLetters[i]
-    console.log('this is ' + g)
-    var a = 'b'
-    console.log('this is ' + a);
-    a = '_'
-    console.log('this is ' + a)
-  }
-  document.onkeyup = function (event) {
-    guessLetter = event.key
-    console.log('onkeyup' + guessLetter)
-    alert("you've pressed " + guessLetter)
-    if (gameLetters.indexOf(guessLetter) !== -1) {
-      alert('your letter was found')
-      alert(guessLetter)
-      var x = document.getElementById('foo')
-      x.innerHTML = guessLetter
-    } else {
-      alert('your letter was not found')
-    }
-    for (var i = 0; i < guessLetter.length; i++) {
-      var b = guessLetter[i]
-      alert(guessLetter[i])
-      var s = document.getElementById('wordDiv')
-      s.innerHTML = b
-    }
+displayBlanks = function () {
+  var addToScreen = document.getElementById('foo')
+  var spaces = ''
+  for(var i = 0; i <+ gameLettersArray.length; i++) {
+    spaces = spaces + '_ '
+    addToScreen.innerHTML = spaces
   }
 }
+
+document.onkeyup = function (event) {
+  guessLetter = event.key
+  if (gameLetters.indexOf(guessLetter) !== -1) {
+    alert('your letter was found')
+    alert(guessLetter)
+    var x = document.getElementById('foo')
+    x.innerHTML = guessLetter
+  } else {
+    alert('your letter was not found')
+  }
+
+}
+}
 game()
+
+
+
+
+  // alert(gameLetters.length)
+
+
+  //   for (var i = 0; i < guessLetter.length; i++) {
+  //     var b = guessLetter[i]
+  //     alert(guessLetter[i])
+  //     var s = document.getElementById('winDiv')
+  //     s.innerHTML = b
+  //   }
+  //   for (var j = 0; j < gameLetters.length; j++) {
+  //     var g = gameLetters[j]
+  //     gameLetters[j] = '_'
+  //     alert('this is ' + gameLetters[j])
+  //     var l = document.getElementById('winDiv')
+  //     l.innerHTML = gameLetters[j]
+  //   }
+  // }
+
 
 // function updateVegetablesCollection (veggies, veggie) {
 //     if (veggies.indexOf(veggie) === -1) {
