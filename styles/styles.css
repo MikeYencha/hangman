@@ -65,7 +65,7 @@ section .body-content {
 .gallows {
   padding: 0 10px;
 }
-#foo,#winDiv {
+#foo,#wordDiv {
   margin: 20px;
   background-color: pink;
   padding: 20px;

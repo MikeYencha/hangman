@@ -17,12 +17,12 @@ function game () {
   console.log(gameLetters)
 
   for (var i = 0; i < gameLetters.length; i++) {
-    gameLetters[i] = '_'
-    var node = document.createElement("div")
-    var textnode = document.createTextNode(gameLetters[i])
-    node.appendChild(textnode)
-    console.log(gameLetters[i])
-    document.getElementById('word').appendChild(node)
+    var g = gameLetters[i]
+    console.log('this is ' + g)
+    var a = 'b'
+    console.log('this is ' + a);
+    a = '_'
+    console.log('this is ' + a)
   }
   document.onkeyup = function (event) {
     guessLetter = event.key
@@ -39,7 +39,7 @@ function game () {
     for (var i = 0; i < guessLetter.length; i++) {
       var b = guessLetter[i]
       alert(guessLetter[i])
-      var s = document.getElementById('winDiv')
+      var s = document.getElementById('wordDiv')
       s.innerHTML = b
     }
   }
